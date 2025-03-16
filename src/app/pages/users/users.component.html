@@ -16,6 +16,7 @@
       <button class="btn btn-success" (click)="changeColor()">Change Color</button>
     </div>
   </div>
+
   <div class="row mt-3">
     <div class="col-3">
       <label for="" #myclient>Select Client</label>
@@ -24,6 +25,7 @@
         <option *ngFor="let item of clients" [value]="item.clientId">{{item.clientName}}</option>
       </select>
     </div>
+
     <div class="col-3">
       <label for="">Select Site</label>
       <select class="form-control" id="dpdlSite" (change)="getBuildingBySiteId()" [(ngModel)]="siteId">
