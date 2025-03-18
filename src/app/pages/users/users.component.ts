@@ -6,31 +6,21 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit,AfterViewInit {
-  
+
 
   @ViewChild('myclient') client!: ElementRef | undefined;
 
   constructor(private http: HttpClient,private renderer: Renderer2,private elementRef: ElementRef) { }
 
-  changeColor() { 
+  changeColor() {
     const button = this.elementRef.nativeElement.querySelector('button');
     this.renderer.setStyle(button, 'background-color', 'red');
   }
 
-  changeFontColor() { 
+  changeFontColor() {
     const button = this.elementRef.nativeElement.querySelector('#dpdlSite');
     this.renderer.addClass(button, 'text-danger');
   }
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -38,39 +28,15 @@ export class UsersComponent implements OnInit,AfterViewInit {
     const modelDiv = document.getElementById('myModal');
     if(modelDiv!= null) {
       modelDiv.style.display = 'block';
-    } 
+    }
   }
 
   CloseModel() {
     const modelDiv = document.getElementById('myModal');
     if(modelDiv!= null) {
       modelDiv.style.display = 'none';
-    } 
+    }
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -81,7 +47,7 @@ export class UsersComponent implements OnInit,AfterViewInit {
     this.loadClients();
 
     // setTimeout(() => {
-    //   
+    //
     //   if(this.client != null) {
     //     this.client.nativeElement.style.color = 'red';
     //   }
